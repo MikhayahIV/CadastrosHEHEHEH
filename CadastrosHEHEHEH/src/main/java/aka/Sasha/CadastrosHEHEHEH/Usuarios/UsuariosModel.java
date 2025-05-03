@@ -1,9 +1,9 @@
-package aka.Sasha.CadastrosHEHEHEH;
+package aka.Sasha.CadastrosHEHEHEH.Usuarios;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import aka.Sasha.CadastrosHEHEHEH.Atividades.AtividadesModel;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity //
 @Table(name = "tb_cadastro")
@@ -11,12 +11,21 @@ public class UsuariosModel {
 
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String nome;
+
     private String email;
+
     private String NumeroCelular;
+
     private int idade;
+
+    //@ManyToOne Um usuário tem uma única atividade
+    @ManyToOne
+    @JoinColumn(name = "atividade_id") //chave estrangeira ou Foreing Key(fk)
+    private AtividadesModel atividade;
 
     public UsuariosModel() {
 

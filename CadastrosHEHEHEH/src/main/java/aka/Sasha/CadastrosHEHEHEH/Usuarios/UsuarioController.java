@@ -1,4 +1,4 @@
-package aka.Sasha.CadastrosHEHEHEH;
+package aka.Sasha.CadastrosHEHEHEH.Usuarios;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 public class UsuarioController {
 
-    @GetMapping("/boasvindas") // colcar as "abas" paginas de navegação
+    @GetMapping("/boasvindas")
     public String boasVindas(){
         return "Essa é minha primeira mensagem nessa rota";
 
