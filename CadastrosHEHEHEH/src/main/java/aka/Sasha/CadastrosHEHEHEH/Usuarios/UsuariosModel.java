@@ -6,8 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity //
 @Table(name = "tb_cadastro")
 @Data
@@ -24,7 +22,7 @@ public class UsuariosModel {
 
     private String email;
 
-    private String NumeroCelular;
+    private String numeroCelular;
 
     private int idade;
 
@@ -34,4 +32,7 @@ public class UsuariosModel {
     private AtividadesModel atividade;
 
 
+
+
 }
+
